@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Course Registration Form</title>
+        <link rel="stylesheet" href="./styles.css">
+
+	</head>
+	<body>
+		<h1>Course Registration Form</h1>
+		<form action="">
+			<fieldset>
+				<legend>Personal Details</legend>
+				<table>
+					<tr>
+						<td><label for="fname">First Name</label></td>
+						<td>
+							<input
+								type="text"
+								name="fname"
+								placeholder="Ex:Sushmita"
+								required
+							/>
+                            <p>Enter your Name</p>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="surname">Surname</label></td>
+						<td>
+							<input
+								type="text"
+								name="surname"
+								placeholder="Ex:Chilla"
+                                optional
+							/>
+                            <p>Enter your surname</p>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="mobile">Mobile number</label></td>
+						<td>
+							<input
+								type="tel"
+								name="mobile"
+								placeholder="Ex:987-897-0987"
+								required
+							/>
+                            <p>Enter your Mobile Number</p>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="email">Email</label></td>
+						<td>
+							<input
+								type="email"
+								name="email"
+								placeholder="Ex:sushmita@gmail.com"
+								required
+							/>
+                            <p>Enter Your Email Address</p>
+							<img src="./check.png" width="15px" height="15px" id="tick">
+							<img src="./mail.png" width="15px" height="15px" id="cross">
+						</td>
+					</tr>
+					<tr>
+						<td><label for="password">Password</label></td>
+						<td>
+							<input
+								type="password"
+								name="password"
+								placeholder="min 8 characters"
+								required
+							/>
+                            <p>Enter the strong password</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="confirm-password">Confirm Password</label>
+						</td>
+						<td>
+							<input
+								type="password"
+								name="confirm-password"
+								placeholder="min 8 characters"
+								required
+							/>
+                            <p>Retype the password</p>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="dob">DOB</label></td>
+						<td><input type="date" name="dob" required /></td>
+					</tr>
+					<tr>
+						<td><label for="age">AGE</label></td>
+						<td>
+							<input
+								type="number"
+								name="age"
+								min="18"
+								max="100"
+								required
+							/>
+                            <p>Enter your Age</p>
+						</td>
+					</tr>
+					<tr>
+						<td><label>Gender</label></td>
+						<td>
+							<input
+								type="radio"
+								name="gender"
+								value="Male"
+								required
+							/>
+							<label for="male">Male</label>
+							<input type="radio" name="gender" value="Female" />
+							<label for="female">Female</label>
+							<input type="radio" name="gender" value="Other" />
+							<label for="other">Others</label>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="country">Country</label></td>
+						<td>
+							<select name="Country" required>
+								<option name="INDIA" value="INDIA">
+									INDIA
+								</option>
+								<option name="USA" value="USA">USA</option>
+								<option name="China" value="China">
+									China
+								</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="picture">Upload Picture</label></td>
+						<td><input type="file" name="picture" /></td>
+					</tr>
+					<tr>
+						<td><input type="reset" Value="Reset"></td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<fieldset>
+				<legend>Course Details</legend>
+
+				<label for="Course">Select Course</label><br />
+				<select name="Course" required>
+					<option class="Python Full Stack" value="Python Full Stack">
+						Python Full Stack
+					</option>
+					<option class="Java Full Stack" value="Java Full Stack">
+						Java Full Stack
+					</option>
+					<option class="Core Java" value="Core Java">
+						Core Java
+					</option>
+					<option
+						class="Python for DataScience"
+						value="Python for DataScience"
+					>
+						Python for DataScience
+					</option></select><br /><br />
+
+				<label>Delivery Mode</label><br />
+				<input type="radio" name="mode" value="Online" required />
+				<label for="online">ONLINE</label>
+				<input type="radio" name="mode" value="Offline" />
+				<label for="offline">OFFLINE</label><br /><br />
+
+				<label for="institute">Institute Name:</label>
+				<input
+					type="text"
+					name="institute"
+					value="TAP ACADEMY"
+					readonly
+				/><br /><br />
+
+				<label for="coding"
+					>Choose your present Coding knowledge level:</label
+				><br />
+				<input type="range" name="coding" min="1" max="5" /><br /><br />
+
+				<label for="comments">Comments</label><br />
+				<textarea
+					id="comments"
+					name="comments"
+					rows="4"
+					cols="50"
+				></textarea>
+			</fieldset>
+			<br />
+
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
